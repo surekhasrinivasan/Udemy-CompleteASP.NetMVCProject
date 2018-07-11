@@ -24,6 +24,7 @@ namespace Vidly.Controllers
         {
             return Content("id = 1" + id);
         }
+
         //this action will be called when we navigate to //movies
         public ActionResult Index(int? pageIndex, string sortBy)
         {
@@ -34,6 +35,11 @@ namespace Vidly.Controllers
                 sortBy = "Name";
 
             return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+        }
+
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
         }
     }
 }
