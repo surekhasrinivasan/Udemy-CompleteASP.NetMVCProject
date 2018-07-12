@@ -13,6 +13,13 @@ namespace Vidly.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek!" };
+
+            //To pass data to a view just pass the movie object in the viewResult
+            var viewResult = new ViewResult();
+
+            //movie object will be assigned to Model property
+            viewResult.ViewData.Model
+
             return View(movie);
             //return Content("Hello World!");
             //return HttpNotFound();
