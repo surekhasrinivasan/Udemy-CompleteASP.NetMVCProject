@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@* we can set Model directive here *@
+@model Vidly.ViewModels.RandomMovieViewModel
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -9,6 +11,8 @@
 
 </head>
 <body>
+    @*Optionally we can also pass Model name as a 2nd argument in the Partial method for eg. @Html.Partial("_NavBar", Model.Movie)*@
+    @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
         <hr />
